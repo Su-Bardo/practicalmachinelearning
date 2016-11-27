@@ -97,7 +97,7 @@ fit.RF <- train(x, y, data=train, method="rf", trControl=fitControl, ntree=250)
 A while after that (15 minutes fo waiting) we get our model fitted. Now we test our model on validation set.
 ```{r, message = T}
 predict.RF<- predict(fit.RF, validatRF)
-confusionMatrix(validatRF$classe, predict.RF)
+confusionMatrix(validatRF$classe, predict.RF)$overall
 ```
 The accuracy of the model on validation set is 99.42%. 
 
